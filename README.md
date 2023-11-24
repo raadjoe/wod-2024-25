@@ -1,1 +1,1 @@
-# wod-2023-24
+# Materials for the Web of Data course 2023-24

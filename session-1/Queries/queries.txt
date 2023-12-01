@@ -1,0 +1,159 @@
+Q4.1.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select * where { 
+    ?country rdf:type wod:Country ;
+          rdfs:label ?countryLabel ;
+          wod:medalsWon ?medals ;
+          wod:timesParticipated ?participation
+    BIND(ROUND(?medals/?participation) AS ?ratio)
+    FILTER(?medals >0)
+} ORDER BY DESC(?ratio) DESC(?medals)
+
+--------
+
+Q4. 2.
+
+# This query is executed from the Wikidata SPARQL interface: https://query.wikidata.org/
+# The reason for the aggregation functions (max) and the GROUP BY at the end of the query is that some countries have more than one value for population in this year. So we only keep the higher value. 
+
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT ?countryLabel (MAX(?population)AS ?maxPopulation) (MAX(?date)AS ?maxDate) 
+WHERE {
+  ?country wdt:P31 wd:Q6256 ;
+           rdfs:label ?countryLabel ;
+              p:P1082 ?populationStatement .
+  ?populationStatement ps:P1082 ?population ;
+                       pq:P585 ?date . # pq:P585 = point in time
+  
+  FILTER(LANG(?countryLabel) = 'en')
+  FIlTER(YEAR(?date) = 2012 || YEAR(?date) = 2013)                    
+} GROUP BY ?countryLabel
+ORDER BY DESC(?maxPopulation)
+
+
+--------
+
+
+Q5.1.
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+SELECT ?countryLabel (MAX(?population)AS ?maxPopulation) (MAX(?date)AS ?maxDate)  
+WHERE {
+        SERVICE <https://query.wikidata.org/bigdata/namespace/wdq/sparql> {
+        ?country wdt:P31 wd:Q6256 ;
+                 rdfs:label ?countryLabel ;
+                 p:P1082 ?populationStatement .
+        
+        ?populationStatement ps:P1082 ?population ;
+                             pq:P585 ?date . # pq:P585 = point in time
+  
+  FILTER(LANG(?countryLabel) = 'en')
+  FIlTER(YEAR(?date) = 2012 || YEAR(?date) = 2013) 
+    } 
+} GROUP BY ?countryLabel
+ORDER BY DESC(?maxPopulation)
+
+
+
+--------
+
+Q5.2.
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT {
+    ?countryLOCAL owl:sameAs ?country ;
+                  wod:population ?population .
+}WHERE {
+    ?countryLOCAL rdf:type wod:Country ;
+                  rdfs:label ?countryLOCALLabel ;
+                  SERVICE <https://query.wikidata.org/bigdata/namespace/wdq/sparql> {
+        ?country wdt:P31 wd:Q6256 ;
+                 rdfs:label ?countryLabel ;
+                 p:P1082 ?populationStatement .
+        ?populationStatement ps:P1082 ?population ;
+                             pq:P585 ?date . # pq:P585 = point in time
+        FILTER(LANG(?countryLabel) = 'en')
+        FIlTER(YEAR(?date) = 2012 || YEAR(?date) = 2013)
+    }
+    FILTER(?countryLOCALLabel = ?countryLabel)   
+} LIMIT 10
+
+--------
+
+Q5.3.
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+INSERT {
+    ?countryLOCAL owl:sameAs ?country ;
+                  wod:population ?population .
+}WHERE {
+    ?countryLOCAL rdf:type wod:Country ;
+                  rdfs:label ?countryLOCALLabel ;
+                  SERVICE <https://query.wikidata.org/bigdata/namespace/wdq/sparql> {
+        ?country wdt:P31 wd:Q6256 ;
+                 rdfs:label ?countryLabel ;
+                 p:P1082 ?populationStatement .
+        ?populationStatement ps:P1082 ?population ;
+                             pq:P585 ?date . # pq:P585 = point in time
+        FILTER(LANG(?countryLabel) = 'en')
+        FIlTER(YEAR(?date) = 2012 || YEAR(?date) = 2013)
+    }
+    FILTER(?countryLOCALLabel = ?countryLabel)   
+}
+
+--------
+
+Q5.4.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+SELECT ?countryLabel (MAX(?ratio)AS ?maxRatio) WHERE {
+    ?country rdf:type wod:Country ;
+          rdfs:label ?countryLabel ;
+          wod:medalsWon ?medals;
+          wod:population ?population .
+    FILTER (?medals != 0) 
+    BIND (ROUND(?population/?medals) AS ?ratio) .
+} GROUP BY ?countryLabel
+ORDER BY ?maxRatio
+LIMIT 5
+
+# Finland is one of the most performing countries in the Olympics needing approximately 18,010 citizens to win 1 olympic medal 
+

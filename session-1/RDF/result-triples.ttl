@@ -1,0 +1,835 @@
+@base <http://example.com/base/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wod: <https://paris-saclay.fr/courses/wod/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+wod:USA a wod:Country;
+  rdfs:label "United States"@en;
+  wod:countryCode "USA";
+  wod:fullName "United States of America"@en;
+  wod:numberOfGold "40"^^xsd:int;
+  wod:numberOfSilver "44"^^xsd:int;
+  wod:numberOfBronze "42"^^xsd:int;
+  wod:numberOfMedals "126"^^xsd:int .
+
+wod:CHN a wod:Country;
+  rdfs:label "China"@en;
+  wod:countryCode "CHN";
+  wod:fullName "People's Republic of China"@en;
+  wod:numberOfGold "40"^^xsd:int;
+  wod:numberOfSilver "27"^^xsd:int;
+  wod:numberOfBronze "24"^^xsd:int;
+  wod:numberOfMedals "91"^^xsd:int .
+
+wod:JPN a wod:Country;
+  rdfs:label "Japan"@en;
+  wod:countryCode "JPN";
+  wod:fullName "Japan"@en;
+  wod:numberOfGold "20"^^xsd:int;
+  wod:numberOfSilver "12"^^xsd:int;
+  wod:numberOfBronze "13"^^xsd:int;
+  wod:numberOfMedals "45"^^xsd:int .
+
+wod:AUS a wod:Country;
+  rdfs:label "Australia"@en;
+  wod:countryCode "AUS";
+  wod:fullName "Australia"@en;
+  wod:numberOfGold "18"^^xsd:int;
+  wod:numberOfSilver "19"^^xsd:int;
+  wod:numberOfBronze "16"^^xsd:int;
+  wod:numberOfMedals "53"^^xsd:int .
+
+wod:FRA a wod:Country;
+  rdfs:label "France"@en;
+  wod:countryCode "FRA";
+  wod:fullName "France"@en;
+  wod:numberOfGold "16"^^xsd:int;
+  wod:numberOfSilver "26"^^xsd:int;
+  wod:numberOfBronze "22"^^xsd:int;
+  wod:numberOfMedals "64"^^xsd:int .
+
+wod:NED a wod:Country;
+  rdfs:label "Netherlands"@en;
+  wod:countryCode "NED";
+  wod:fullName "Netherlands"@en;
+  wod:numberOfGold "15"^^xsd:int;
+  wod:numberOfSilver "7"^^xsd:int;
+  wod:numberOfBronze "12"^^xsd:int;
+  wod:numberOfMedals "34"^^xsd:int .
+
+wod:GBR a wod:Country;
+  rdfs:label "Great Britain"@en;
+  wod:countryCode "GBR";
+  wod:fullName "Great Britain"@en;
+  wod:numberOfGold "14"^^xsd:int;
+  wod:numberOfSilver "22"^^xsd:int;
+  wod:numberOfBronze "29"^^xsd:int;
+  wod:numberOfMedals "65"^^xsd:int .
+
+wod:KOR a wod:Country;
+  rdfs:label "Korea"@en;
+  wod:countryCode "KOR";
+  wod:fullName "Republic of Korea"@en;
+  wod:numberOfGold "13"^^xsd:int;
+  wod:numberOfSilver "9"^^xsd:int;
+  wod:numberOfBronze "10"^^xsd:int;
+  wod:numberOfMedals "32"^^xsd:int .
+
+wod:ITA a wod:Country;
+  rdfs:label "Italy"@en;
+  wod:countryCode "ITA";
+  wod:fullName "Italy"@en;
+  wod:numberOfGold "12"^^xsd:int;
+  wod:numberOfSilver "13"^^xsd:int;
+  wod:numberOfBronze "15"^^xsd:int;
+  wod:numberOfMedals "40"^^xsd:int .
+
+wod:GER a wod:Country;
+  rdfs:label "Germany"@en;
+  wod:countryCode "GER";
+  wod:fullName "Germany"@en;
+  wod:numberOfGold "12"^^xsd:int;
+  wod:numberOfSilver "13"^^xsd:int;
+  wod:numberOfBronze "8"^^xsd:int;
+  wod:numberOfMedals "33"^^xsd:int .
+
+wod:NZL a wod:Country;
+  rdfs:label "New Zealand"@en;
+  wod:countryCode "NZL";
+  wod:fullName "New Zealand"@en;
+  wod:numberOfGold "10"^^xsd:int;
+  wod:numberOfSilver "7"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "20"^^xsd:int .
+
+wod:CAN a wod:Country;
+  rdfs:label "Canada"@en;
+  wod:countryCode "CAN";
+  wod:fullName "Canada"@en;
+  wod:numberOfGold "9"^^xsd:int;
+  wod:numberOfSilver "7"^^xsd:int;
+  wod:numberOfBronze "11"^^xsd:int;
+  wod:numberOfMedals "27"^^xsd:int .
+
+wod:UZB a wod:Country;
+  rdfs:label "Uzbekistan"@en;
+  wod:countryCode "UZB";
+  wod:fullName "Uzbekistan"@en;
+  wod:numberOfGold "8"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "13"^^xsd:int .
+
+wod:HUN a wod:Country;
+  rdfs:label "Hungary"@en;
+  wod:countryCode "HUN";
+  wod:fullName "Hungary"@en;
+  wod:numberOfGold "6"^^xsd:int;
+  wod:numberOfSilver "7"^^xsd:int;
+  wod:numberOfBronze "6"^^xsd:int;
+  wod:numberOfMedals "19"^^xsd:int .
+
+wod:ESP a wod:Country;
+  rdfs:label "Spain"@en;
+  wod:countryCode "ESP";
+  wod:fullName "Spain"@en;
+  wod:numberOfGold "5"^^xsd:int;
+  wod:numberOfSilver "4"^^xsd:int;
+  wod:numberOfBronze "9"^^xsd:int;
+  wod:numberOfMedals "18"^^xsd:int .
+
+wod:SWE a wod:Country;
+  rdfs:label "Sweden"@en;
+  wod:countryCode "SWE";
+  wod:fullName "Sweden"@en;
+  wod:numberOfGold "4"^^xsd:int;
+  wod:numberOfSilver "4"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "11"^^xsd:int .
+
+wod:KEN a wod:Country;
+  rdfs:label "Kenya"@en;
+  wod:countryCode "KEN";
+  wod:fullName "Kenya"@en;
+  wod:numberOfGold "4"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "5"^^xsd:int;
+  wod:numberOfMedals "11"^^xsd:int .
+
+wod:NOR a wod:Country;
+  rdfs:label "Norway"@en;
+  wod:countryCode "NOR";
+  wod:fullName "Norway"@en;
+  wod:numberOfGold "4"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "8"^^xsd:int .
+
+wod:IRL a wod:Country;
+  rdfs:label "Ireland"@en;
+  wod:countryCode "IRL";
+  wod:fullName "Ireland"@en;
+  wod:numberOfGold "4"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:BRA a wod:Country;
+  rdfs:label "Brazil"@en;
+  wod:countryCode "BRA";
+  wod:fullName "Brazil"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "7"^^xsd:int;
+  wod:numberOfBronze "10"^^xsd:int;
+  wod:numberOfMedals "20"^^xsd:int .
+
+wod:IRI a wod:Country;
+  rdfs:label "IR Iran"@en;
+  wod:countryCode "IRI";
+  wod:fullName "Islamic Republic of Iran"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "6"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "12"^^xsd:int .
+
+wod:UKR a wod:Country;
+  rdfs:label "Ukraine"@en;
+  wod:countryCode "UKR";
+  wod:fullName "Ukraine"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "5"^^xsd:int;
+  wod:numberOfBronze "4"^^xsd:int;
+  wod:numberOfMedals "12"^^xsd:int .
+
+wod:ROU a wod:Country;
+  rdfs:label "Romania"@en;
+  wod:countryCode "ROU";
+  wod:fullName "Romania"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "4"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "9"^^xsd:int .
+
+wod:GEO a wod:Country;
+  rdfs:label "Georgia"@en;
+  wod:countryCode "GEO";
+  wod:fullName "Georgia"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:BEL a wod:Country;
+  rdfs:label "Belgium"@en;
+  wod:countryCode "BEL";
+  wod:fullName "Belgium"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "6"^^xsd:int;
+  wod:numberOfMedals "10"^^xsd:int .
+
+wod:BUL a wod:Country;
+  rdfs:label "Bulgaria"@en;
+  wod:countryCode "BUL";
+  wod:fullName "Bulgaria"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:SRB a wod:Country;
+  rdfs:label "Serbia"@en;
+  wod:countryCode "SRB";
+  wod:fullName "Serbia"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "5"^^xsd:int .
+
+wod:CZE a wod:Country;
+  rdfs:label "Czechia"@en;
+  wod:countryCode "CZE";
+  wod:fullName "Czechia"@en;
+  wod:numberOfGold "3"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "5"^^xsd:int .
+
+wod:DEN a wod:Country;
+  rdfs:label "Denmark"@en;
+  wod:countryCode "DEN";
+  wod:fullName "Denmark"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "5"^^xsd:int;
+  wod:numberOfMedals "9"^^xsd:int .
+
+wod:AZE a wod:Country;
+  rdfs:label "Azerbaijan"@en;
+  wod:countryCode "AZE";
+  wod:fullName "Azerbaijan"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:CRO a wod:Country;
+  rdfs:label "Croatia"@en;
+  wod:countryCode "CRO";
+  wod:fullName "Croatia"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:CUB a wod:Country;
+  rdfs:label "Cuba"@en;
+  wod:countryCode "CUB";
+  wod:fullName "Cuba"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "6"^^xsd:int;
+  wod:numberOfMedals "9"^^xsd:int .
+
+wod:BRN a wod:Country;
+  rdfs:label "Bahrain"@en;
+  wod:countryCode "BRN";
+  wod:fullName "Bahrain"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:SLO a wod:Country;
+  rdfs:label "Slovenia"@en;
+  wod:countryCode "SLO";
+  wod:fullName "Slovenia"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "3"^^xsd:int .
+
+wod:TPE a wod:Country;
+  rdfs:label "Chinese Taipei"@en;
+  wod:countryCode "TPE";
+  wod:fullName "Chinese Taipei"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "5"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:AUT a wod:Country;
+  rdfs:label "Austria"@en;
+  wod:countryCode "AUT";
+  wod:fullName "Austria"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "5"^^xsd:int .
+
+wod:HKG a wod:Country;
+  rdfs:label "Hong Kong, China"@en;
+  wod:countryCode "HKG";
+  wod:fullName "Hong Kong, China"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:PHI a wod:Country;
+  rdfs:label "Philippines"@en;
+  wod:countryCode "PHI";
+  wod:fullName "Philippines"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:ALG a wod:Country;
+  rdfs:label "Algeria"@en;
+  wod:countryCode "ALG";
+  wod:fullName "Algeria"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "3"^^xsd:int .
+
+wod:INA a wod:Country;
+  rdfs:label "Indonesia"@en;
+  wod:countryCode "INA";
+  wod:fullName "Indonesia"@en;
+  wod:numberOfGold "2"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:ISR a wod:Country;
+  rdfs:label "Israel"@en;
+  wod:countryCode "ISR";
+  wod:fullName "Israel"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "5"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:POL a wod:Country;
+  rdfs:label "Poland"@en;
+  wod:countryCode "POL";
+  wod:fullName "Poland"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "4"^^xsd:int;
+  wod:numberOfBronze "5"^^xsd:int;
+  wod:numberOfMedals "10"^^xsd:int .
+
+wod:KAZ a wod:Country;
+  rdfs:label "Kazakhstan"@en;
+  wod:countryCode "KAZ";
+  wod:fullName "Kazakhstan"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "7"^^xsd:int .
+
+wod:JAM a wod:Country;
+  rdfs:label "Jamaica"@en;
+  wod:countryCode "JAM";
+  wod:fullName "Jamaica"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "6"^^xsd:int .
+
+wod:RSA a wod:Country;
+  rdfs:label "South Africa"@en;
+  wod:countryCode "RSA";
+  wod:fullName "South Africa"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "6"^^xsd:int .
+
+wod:THA a wod:Country;
+  rdfs:label "Thailand"@en;
+  wod:countryCode "THA";
+  wod:fullName "Thailand"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "6"^^xsd:int .
+
+wod:AIN a wod:Country;
+  rdfs:label "AIN"@en;
+  wod:countryCode "AIN";
+  wod:fullName "AIN"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "5"^^xsd:int .
+
+wod:ETH a wod:Country;
+  rdfs:label "Ethiopia"@en;
+  wod:countryCode "ETH";
+  wod:fullName "Ethiopia"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:SUI a wod:Country;
+  rdfs:label "Switzerland"@en;
+  wod:countryCode "SUI";
+  wod:fullName "Switzerland"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "5"^^xsd:int;
+  wod:numberOfMedals "8"^^xsd:int .
+
+wod:ECU a wod:Country;
+  rdfs:label "Ecuador"@en;
+  wod:countryCode "ECU";
+  wod:fullName "Ecuador"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "5"^^xsd:int .
+
+wod:POR a wod:Country;
+  rdfs:label "Portugal"@en;
+  wod:countryCode "POR";
+  wod:fullName "Portugal"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:GRE a wod:Country;
+  rdfs:label "Greece"@en;
+  wod:countryCode "GRE";
+  wod:fullName "Greece"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "6"^^xsd:int;
+  wod:numberOfMedals "8"^^xsd:int .
+
+wod:ARG a wod:Country;
+  rdfs:label "Argentina"@en;
+  wod:countryCode "ARG";
+  wod:fullName "Argentina"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "3"^^xsd:int .
+
+wod:EGY a wod:Country;
+  rdfs:label "Egypt"@en;
+  wod:countryCode "EGY";
+  wod:fullName "Egypt"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "3"^^xsd:int .
+
+wod:TUN a wod:Country;
+  rdfs:label "Tunisia"@en;
+  wod:countryCode "TUN";
+  wod:fullName "Tunisia"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "3"^^xsd:int .
+
+wod:BOT a wod:Country;
+  rdfs:label "Botswana"@en;
+  wod:countryCode "BOT";
+  wod:fullName "Botswana"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:CHI a wod:Country;
+  rdfs:label "Chile"@en;
+  wod:countryCode "CHI";
+  wod:fullName "Chile"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:LCA a wod:Country;
+  rdfs:label "Saint Lucia"@en;
+  wod:countryCode "LCA";
+  wod:fullName "Saint Lucia"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:UGA a wod:Country;
+  rdfs:label "Uganda"@en;
+  wod:countryCode "UGA";
+  wod:fullName "Uganda"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:DOM a wod:Country;
+  rdfs:label "Dominican Republic"@en;
+  wod:countryCode "DOM";
+  wod:fullName "Dominican Republic"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "3"^^xsd:int .
+
+wod:GUA a wod:Country;
+  rdfs:label "Guatemala"@en;
+  wod:countryCode "GUA";
+  wod:fullName "Guatemala"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:MAR a wod:Country;
+  rdfs:label "Morocco"@en;
+  wod:countryCode "MAR";
+  wod:fullName "Morocco"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:DMA a wod:Country;
+  rdfs:label "Dominica"@en;
+  wod:countryCode "DMA";
+  wod:fullName "Dominica"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:PAK a wod:Country;
+  rdfs:label "Pakistan"@en;
+  wod:countryCode "PAK";
+  wod:fullName "Pakistan"@en;
+  wod:numberOfGold "1"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:TUR a wod:Country;
+  rdfs:label "Türkiye"@en;
+  wod:countryCode "TUR";
+  wod:fullName "Türkiye"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "5"^^xsd:int;
+  wod:numberOfMedals "8"^^xsd:int .
+
+wod:MEX a wod:Country;
+  rdfs:label "Mexico"@en;
+  wod:countryCode "MEX";
+  wod:fullName "Mexico"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "5"^^xsd:int .
+
+wod:ARM a wod:Country;
+  rdfs:label "Armenia"@en;
+  wod:countryCode "ARM";
+  wod:fullName "Armenia"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:COL a wod:Country;
+  rdfs:label "Colombia"@en;
+  wod:countryCode "COL";
+  wod:fullName "Colombia"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "3"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:PRK a wod:Country;
+  rdfs:label "DPR Korea"@en;
+  wod:countryCode "PRK";
+  wod:fullName "Democratic People's Republic of Korea"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "4"^^xsd:int;
+  wod:numberOfMedals "6"^^xsd:int .
+
+wod:KGZ a wod:Country;
+  rdfs:label "Kyrgyzstan"@en;
+  wod:countryCode "KGZ";
+  wod:fullName "Kyrgyzstan"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "4"^^xsd:int;
+  wod:numberOfMedals "6"^^xsd:int .
+
+wod:LTU a wod:Country;
+  rdfs:label "Lithuania"@en;
+  wod:countryCode "LTU";
+  wod:fullName "Lithuania"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "2"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:IND a wod:Country;
+  rdfs:label "India"@en;
+  wod:countryCode "IND";
+  wod:fullName "India"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "5"^^xsd:int;
+  wod:numberOfMedals "6"^^xsd:int .
+
+wod:MDA a wod:Country;
+  rdfs:label "Republic of Moldova"@en;
+  wod:countryCode "MDA";
+  wod:fullName "Republic of Moldova"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "4"^^xsd:int .
+
+wod:KOS a wod:Country;
+  rdfs:label "Kosovo"@en;
+  wod:countryCode "KOS";
+  wod:fullName "Kosovo"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:CYP a wod:Country;
+  rdfs:label "Cyprus"@en;
+  wod:countryCode "CYP";
+  wod:fullName "Cyprus"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:FIJ a wod:Country;
+  rdfs:label "Fiji"@en;
+  wod:countryCode "FIJ";
+  wod:fullName "Fiji"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:JOR a wod:Country;
+  rdfs:label "Jordan"@en;
+  wod:countryCode "JOR";
+  wod:fullName "Jordan"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:MGL a wod:Country;
+  rdfs:label "Mongolia"@en;
+  wod:countryCode "MGL";
+  wod:fullName "Mongolia"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:PAN a wod:Country;
+  rdfs:label "Panama"@en;
+  wod:countryCode "PAN";
+  wod:fullName "Panama"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "1"^^xsd:int;
+  wod:numberOfBronze "0"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:TJK a wod:Country;
+  rdfs:label "Tajikistan"@en;
+  wod:countryCode "TJK";
+  wod:fullName "Tajikistan"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "3"^^xsd:int;
+  wod:numberOfMedals "3"^^xsd:int .
+
+wod:ALB a wod:Country;
+  rdfs:label "Albania"@en;
+  wod:countryCode "ALB";
+  wod:fullName "Albania"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:GRN a wod:Country;
+  rdfs:label "Grenada"@en;
+  wod:countryCode "GRN";
+  wod:fullName "Grenada"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:MAS a wod:Country;
+  rdfs:label "Malaysia"@en;
+  wod:countryCode "MAS";
+  wod:fullName "Malaysia"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:PUR a wod:Country;
+  rdfs:label "Puerto Rico"@en;
+  wod:countryCode "PUR";
+  wod:fullName "Puerto Rico"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "2"^^xsd:int;
+  wod:numberOfMedals "2"^^xsd:int .
+
+wod:CPV a wod:Country;
+  rdfs:label "Cabo Verde"@en;
+  wod:countryCode "CPV";
+  wod:fullName "Cabo Verde"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:CIV a wod:Country;
+  rdfs:label "Côte d'Ivoire"@en;
+  wod:countryCode "CIV";
+  wod:fullName "Côte d'Ivoire"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:EOR a wod:Country;
+  rdfs:label "EOR"@en;
+  wod:countryCode "EOR";
+  wod:fullName "Refugee Olympic Team"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:PER a wod:Country;
+  rdfs:label "Peru"@en;
+  wod:countryCode "PER";
+  wod:fullName "Peru"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:QAT a wod:Country;
+  rdfs:label "Qatar"@en;
+  wod:countryCode "QAT";
+  wod:fullName "Qatar"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:SGP a wod:Country;
+  rdfs:label "Singapore"@en;
+  wod:countryCode "SGP";
+  wod:fullName "Singapore"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:SVK a wod:Country;
+  rdfs:label "Slovakia"@en;
+  wod:countryCode "SVK";
+  wod:fullName "Slovakia"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .
+
+wod:ZAM a wod:Country;
+  rdfs:label "Zambia"@en;
+  wod:countryCode "ZAM";
+  wod:fullName "Zambia"@en;
+  wod:numberOfGold "0"^^xsd:int;
+  wod:numberOfSilver "0"^^xsd:int;
+  wod:numberOfBronze "1"^^xsd:int;
+  wod:numberOfMedals "1"^^xsd:int .

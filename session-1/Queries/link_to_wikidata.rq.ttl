@@ -1,0 +1,31 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+
+INSERT  {
+    # triples to construct or insert
+    ?cLocal owl:sameAs ?cWikidata ;
+        wod:population ?population
+}
+WHERE {
+    # local query
+    ?cLocal a wod:Country ;
+      rdfs:label ?cLocalName ;
+    
+    SERVICE   <https://query.wikidata.org/bigdata/namespace/wdq/sparql> {
+    # wikidata query
+     ?cWikidata wdt:P31 wd:Q6256 ;
+          rdfs:label ?cWikidataName ;
+           wdt:P1082 ?population .
+        FILTER (LANG(?cWikidataName) = "en")
+  } 
+    # comparing the labels of local and Wikidata entities
+    FILTER(?cLocalName = ?cWikidataName)
+} 

@@ -1,0 +1,24 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+
+select ?labelCity1 ?labelCity2 ?distance where {
+   ?essone a wod:Department ;
+        rdfs:label "Essonne"@fr ;
+        wod:includes ?city1, ?city2 .
+    
+    ?city1 rdfs:label ?labelCity1 ;
+            geo:hasGeometry ?shape1 .
+    ?shape1 geo:asWKT ?geo1 .
+    
+    ?city2 rdfs:label ?labelCity2 ;
+            geo:hasGeometry ?shape2 .
+    ?shape2 geo:asWKT ?geo2 .
+    
+    BIND(geof:distance(?geo1, ?geo2, uom:metre) AS ?distance)
+    FILTER(?city1 != ?city2)
+    
+} ORDER BY DESC(?distance)
+LIMIT 1

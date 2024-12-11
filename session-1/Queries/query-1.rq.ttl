@@ -1,0 +1,9 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+
+select * where {
+    ?cntry a wod:Country ;
+        rdfs:label ?cntryName ;
+        wod:numberOfMedals ?medals
+}     ORDER BY DESC (?medals) 
+limit 10

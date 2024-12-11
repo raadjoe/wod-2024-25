@@ -1,0 +1,11 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+
+select ?region ?regionLabel (COUNT(?city) AS ?nbCities) where {
+    ?region a wod:Region ;
+            rdfs:label ?regionLabel ;
+            wod:includes/wod:includes ?city .
+    ?city a wod:City .
+    
+} GROUP BY ?region ?regionLabel
+ORDER BY DESC (?nbCities)

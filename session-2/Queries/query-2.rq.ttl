@@ -1,0 +1,23 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wod: <https://paris-saclay.fr/courses/wod/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+
+select ?neighborLabel ?distance where {
+    ?orsay a wod:City ;
+        rdfs:label "Orsay"@fr ;
+        geo:hasGeometry ?shapeOrsay .
+    ?shapeOrsay geo:asWKT ?geoOrsay .
+
+    ?neighbor a wod:City ;
+             rdfs:label ?neighborLabel ;
+             geo:hasGeometry ?shapeNeighbor .
+    ?shapeNeighbor geo:asWKT ?geoNeighbor .
+    
+    BIND(geof:distance(?geoOrsay, ?geoNeighbor, uom:metre) AS ?distance)
+    
+    FILTER (?neighbor != ?orsay)
+    
+} ORDER BY ?distance
+limit 10

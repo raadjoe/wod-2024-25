@@ -1,0 +1,7 @@
+# Query to execute in your GraphDB repository to activate GeoSPARQL functions
+
+PREFIX geosparql: <http://www.ontotext.com/plugins/geosparql#>
+
+INSERT DATA {
+  [] geosparql:enabled "true" .
+}
